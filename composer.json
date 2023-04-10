@@ -1,0 +1,24 @@
+{
+    "name": "weiaibaicai/hupun",
+    "type": "library",
+    "description": "Laravel的万里牛ERP开放接口的",
+    "keywords": ["laravel", "hupun", "wanliniu", "erp", "api", "sdk"],
+    "homepage": "weiaibaicai/hupun",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "weiaibaicai",
+            "email": "923108452@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0",
+        "ext-curl": "*",
+        "illuminate/container": ">=5.1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Weiaibaicai\\Hupun\\": "src"
+        }
+    }
+}
