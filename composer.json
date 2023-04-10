@@ -3,7 +3,7 @@
     "type": "library",
     "description": "Laravel的万里牛ERP开放接口的",
     "keywords": ["laravel", "hupun", "wanliniu", "erp", "api", "sdk"],
-    "homepage": "weiaibaicai/hupun",
+    "homepage": "",
     "license": "MIT",
     "authors": [
         {
