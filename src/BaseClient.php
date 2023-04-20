@@ -208,13 +208,13 @@ class BaseClient
         Log::channel($this->logChannel)->info('万里牛报错:' . $place, $logData);
     }
 
-    protected function logResult($requestUrl, $result): void
+    protected function logResult($requestUrl, $curlParams, $result): void
     {
         if (!$this->isLogResult) {
             return;
         }
 
-        Log::channel($this->logChannel)->info('万里牛请求结果:' . $requestUrl, $result);
+        Log::channel($this->logChannel)->info('万里牛请求结果:' . $requestUrl, ['curl_params' => $curlParams, 'respond'=>$result]);
     }
 
     /**
@@ -301,7 +301,7 @@ class BaseClient
             $res['response'] = json_decode($res['response'], true);
         }
 
-        $this->logResult($requestUrl, $res);
+        $this->logResult($requestUrl, $curlParams, $res);
 
         return $res;
     }
