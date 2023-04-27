@@ -4,23 +4,9 @@
 #### 安装
 第一步：执行 composer 命令下载包 `composer require weiaibaicai/hupun`
 
-第二步：把 HupunServiceProvider 添加到 `config/app.php`  
-```php
-'providers' => [
-	Weiaibaicai\Hupun\HupunServiceProvider::class,
-],
-```
+第二步：执行 artisan 命令发布配置文件`php artisan vendor:publish --provider="Weiaibaicai\Hupun\HupunServiceProvider"`
 
-第三步：把 Hupun 添加到 `config/app.php`
-```php
-'aliases' => [
-	'Hupun' => Weiaibaicai\Hupun\Facades\Hupun::class,
-],
-```
-
-第四步：执行 artisan 命令发布配置文件`php artisan vendor:publish --provider="Weiaibaicai\Hupun\HupunServiceProvider"`
-
-第五步：去 .env 添加如下配置
+第三步：去 .env 添加如下配置
 ```php
 # open接口的key
 HUPUN_OPEN_KEY=openAppKey

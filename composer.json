@@ -18,7 +18,17 @@
     },
     "autoload": {
         "psr-4": {
-            "Weiaibaicai\\Hupun\\": "src"
+            "Weiaibaicai\\Hupun\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Weiaibaicai\\Hupun\\HupunServiceProvider"
+            ],
+            "aliases": {
+                "Hupun": "Weiaibaicai\\Hupun\\Facades\\Hupun"
+            }
         }
     }
 }
