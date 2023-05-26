@@ -234,7 +234,7 @@ class BaseClient
     {
         foreach ($params as $key => $value) {
             if (is_array($value)) {
-                $params[$key] = json_encode($value);
+                $params[$key] = json_encode($value,JSON_UNESCAPED_UNICODE);
             }
         }
 
